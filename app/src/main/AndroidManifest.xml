@@ -10,34 +10,39 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".AlertsList"
+            android:label="@string/title_activity_alerts_list"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".AlertDetails"
             android:label="Alert Details"
             android:parentActivityName=".Alerts">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Alerts" />
         </activity>
-
         <activity
             android:name=".Alerts"
             android:label="Alerts"
             android:parentActivityName=".MainMenu">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainMenu" />
         </activity>
-
         <activity
             android:name=".CommandControls"
             android:label="Command Controls"
             android:parentActivityName=".MainMenu">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainMenu"/>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainMenu" />
         </activity>
-
         <activity
             android:name=".MainMenu"
             android:label="Main Menu"
             android:parentActivityName=".MainActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity android:name=".MainActivity">

@@ -21,4 +21,9 @@ public class MainMenu extends AppCompatActivity {
         Intent intent = new Intent(this, Alerts.class);
         startActivity(intent);
     }
+
+    public void launchImagesList(View view){
+        Intent intent = new Intent(this, AlertsList.class);
+        startActivity(intent);
+    }
 }
