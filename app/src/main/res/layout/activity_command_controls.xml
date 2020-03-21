@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/get_front"
         android:layout_width="0dp"
         android:layout_height="68dp"
         android:layout_marginTop="50dp"
@@ -30,13 +30,14 @@
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button9"
+        android:onClick="handleCommand"
+        app:layout_constraintBottom_toTopOf="@+id/get_left"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/get_rear"
         android:layout_width="0dp"
         android:layout_height="68dp"
         android:layout_marginTop="15dp"
@@ -45,14 +46,15 @@
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:onClick="handleCommand"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/get_right" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/get_right"
         android:layout_width="0dp"
         android:layout_height="68dp"
         android:layout_marginTop="15dp"
@@ -61,14 +63,15 @@
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
+        android:onClick="handleCommand"
+        app:layout_constraintBottom_toTopOf="@+id/get_rear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button9" />
+        app:layout_constraintTop_toBottomOf="@+id/get_left" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/get_left"
         android:layout_width="0dp"
         android:layout_height="68dp"
         android:layout_marginTop="15dp"
@@ -77,9 +80,10 @@
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
+        android:onClick="handleCommand"
+        app:layout_constraintBottom_toTopOf="@+id/get_right"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/get_front" />
 </android.support.constraint.ConstraintLayout>
