@@ -17,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -38,7 +39,8 @@ ItemFragment.OnListFragmentInteractionListener {
     private RecyclerView recyclerView;
     private BroadcastReceiver onComplete;
     private View progressBar;
-
+    //Set debug TAG
+    private static final String TAG = "AlertsList";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,6 +134,7 @@ ItemFragment.OnListFragmentInteractionListener {
         super.onStop();
     }
 
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -150,6 +153,10 @@ ItemFragment.OnListFragmentInteractionListener {
     public void onListFragmentInteraction(PictureItem item) {
         // This is where you'd handle clicking an item in the list
         //Show larger size image
+        //item.uri;
+        //item.date;
+        Log.d(TAG, item.uri.toString());
+        Log.d(TAG, item.date);
 
         //Provide option to delete
         //Show image capture details
@@ -158,6 +165,8 @@ ItemFragment.OnListFragmentInteractionListener {
             //* Direction of capture
         //Launch alert details
         Intent intent = new Intent(this, AlertDetails.class);
+        intent.putExtra("uri", item.uri.toString());
+        intent.putExtra("date", item.date);
         startActivity(intent);
     }
 }
