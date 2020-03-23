@@ -1,3 +1,6 @@
+
+//Source: https://www.learningsomethingnew.com/how-to-use-a-recycler-view-to-show-images-from-storage
+
 package com.example.autoxwatchdog;
 
 import android.annotation.SuppressLint;
